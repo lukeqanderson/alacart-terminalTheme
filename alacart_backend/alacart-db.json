@@ -1,0 +1,175 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.2rjuctA82u1FTqLlyGJmogHaEK%26pid%3DApi&f=1",
+      "name": "Pizza",
+      "description": "Fresh from the oven!",
+      "size": [
+        [
+          "Small",
+          1,
+          "10 inch",
+          0
+        ],
+        [
+          "Medium",
+          2,
+          "12 inch",
+          4
+        ],
+        [
+          "Large",
+          3,
+          "14 inch",
+          8
+        ],
+        [
+          "Extra Large",
+          4,
+          "16 inch",
+          10
+        ]
+      ],
+      "toppings": [
+        [
+          "extra cheese",
+          0,
+          2
+        ],
+        [
+          "pepperoni",
+          1,
+          2
+        ],
+        [
+          "onion",
+          2,
+          1
+        ]
+      ],
+      "price": 18.99
+    },
+    {
+      "id": 2,
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.G13rEy-90dsbrAVFBL2MQwHaFj%26pid%3DApi&f=1",
+      "name": "Salad",
+      "description": "Fresh and crisp garden salad!",
+      "size": [
+        [
+          "Small",
+          5,
+          0
+        ],
+        [
+          "Medium",
+          6,
+          3
+        ],
+        [
+          "Large",
+          7,
+          5
+        ]
+      ],
+      "toppings": [],
+      "price": 10.99
+    },
+    {
+      "id": 3,
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ZmLZZboWmuX2ZyGQLHFOwQHaD5%26pid%3DApi&f=1",
+      "name": "Wings",
+      "description": "Our famous Buffalo style hot wings!",
+      "size": [
+        [
+          "Small",
+          8,
+          "6 piece",
+          0
+        ],
+        [
+          "Medium",
+          9,
+          "10 piece",
+          4
+        ],
+        [
+          "Large",
+          10,
+          "16 piece",
+          8
+        ]
+      ],
+      "toppings": [
+        [
+          "blue cheese",
+          3,
+          0.5
+        ],
+        [
+          "Ranch",
+          4,
+          0.5
+        ]
+      ],
+      "price": 12.99
+    }
+  ],
+  "Cart": [
+    {
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.2rjuctA82u1FTqLlyGJmogHaEK%26pid%3DApi&f=1",
+      "name": "Pizza",
+      "description": "Fresh from the oven!",
+      "size": "Medium,2,12 inch,4",
+      "toppings": [
+        "extra cheese"
+      ],
+      "price": 18.99,
+      "quantity": "2",
+      "notes": "",
+      "id": 1
+    }
+  ],
+  "Checkout": [
+    {
+      "fromCart": [
+        {
+          "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.2rjuctA82u1FTqLlyGJmogHaEK%26pid%3DApi&f=1",
+          "name": "Pizza",
+          "description": "Fresh from the oven!",
+          "size": "Medium,2,12 inch,4",
+          "toppings": [
+            "extra cheese"
+          ],
+          "price": 18.99,
+          "quantity": "2",
+          "notes": "",
+          "id": 1
+        }
+      ],
+      "totalPrice": 37.98,
+      "fees": 8,
+      "orderOption": true,
+      "buttonStylePickup": "btn btn-secondary",
+      "buttonStyleDelivery": "btn btn-success",
+      "checkoutLink": "/checkoutform",
+      "checkBug": [],
+      "id": 1
+    }
+  ],
+  "CustomerInfo": [],
+  "Users": [
+    {
+      "id": 1,
+      "email": "customer@test.com",
+      "password": "customer",
+      "isRestaurant": false
+    },
+    {
+      "id": 2,
+      "email": "restaurant@test.com",
+      "password": "restaurant",
+      "isRestaurant": true
+    }
+  ]
+}
