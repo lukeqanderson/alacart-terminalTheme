@@ -8,7 +8,8 @@ class Menu extends Component {
     //Creates the menu as part of the state in base for (no add-ons)
     state = {
         menu: [],
-        time: null
+        time: null,
+        timeMinutes: null
     }
 
     render() {
@@ -30,7 +31,7 @@ class Menu extends Component {
                     <div class="terminal">
                         <div className="cart-div">
                             <div class="ubuntu">user@ubuntu:~$ <p class="title">menu</p></div>
-
+                            {/* return a closed message through method if restaurant is closed */}
                             {this.closedMessage()}
                             <div className="item-grid">
                                 {/* loops the array to return elements */}
@@ -44,6 +45,7 @@ class Menu extends Component {
                                 })}
                             </div>
                             <div className="cart-button-div">
+                                {/* link to cart component */}
                                 <Link className="btn" to="/cart" onClick={this.deleteCheckout}><button className="btn btn-success" type="button">Go to Cart</button></Link>
                             </div>
                             <div class="end">
@@ -59,11 +61,12 @@ class Menu extends Component {
 
     // method to output closed message
     closedMessage = () => {
-        if (this.state.time < 11 & this.state.time >= 21) {
+        if (this.state.time < 11 | this.state.time >= 21) {
             return (
                 <h5><br></br>The restaurant is currently <strong>closed</strong>.
                     <br></br><br></br>Items can be added to your cart but can't be placed until the restaurant opens.
                     <br></br><br></br>The restaurant is open from 11:00AM to 9:00PM Pacific Standard Time.
+                    <br></br><br></br>The current time is: {this.convertMilitaryTime()}.
                     <br></br><br></br></h5>
             )
         }
@@ -74,9 +77,38 @@ class Menu extends Component {
         // gets US Pacific time
         const zone = "America/Los_Angeles"
         const time = DateTime.now().setZone(zone).hour;
+        const timeMinutes = DateTime.now().setZone(zone).minute;
         this.setState({
-            currentTimeHours: time
+            time: time
         })
+        this.setState({
+            timeMinutes: timeMinutes
+        })
+    }
+
+    // method to convert from military time to am pm
+    convertMilitaryTime = () => {
+        let ampm = "AM";
+        let time = this.state.time;
+        let minutes = this.state.timeMinutes;
+
+        if (time >= 12) {
+            ampm = "PM";
+            if (time !== 12) {
+                time = time - 12;
+            }
+
+        }
+        if (time === 0) {
+            time = 12;
+        }
+        // for minutes less that 10
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+
+        time = time + ":" + minutes + ampm;
+        return (time)
     }
 
     // checks to see if component mounts then make HTTP requests

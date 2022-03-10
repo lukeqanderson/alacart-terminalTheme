@@ -523,8 +523,10 @@ class CheckoutForm extends Component {
     toUserTime = (hours, minutes) => {
         let ampm = "AM";
         // to convert to twelve hour pm time
-        if (hours > 12) {
-            hours = hours - 12;
+        if (hours >= 12) {
+            if (hours !== 12) {
+                hours = hours - 12;
+            }
             ampm = "PM";
         }
         // for midnight

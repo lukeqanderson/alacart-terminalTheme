@@ -113,6 +113,7 @@ class Orders extends Component {
                             </tr>
                         </thead>
                         <tbody>
+                            {/* renders all orders for customer if they exist */}
                             {this.state.orders === null ?
                                 <></> :
                                 this.state.orders.map((order, index) => {
@@ -197,6 +198,7 @@ class Orders extends Component {
         )
     }
 
+    // method to display notes for a particular item
     noteItem = (order) => {
         if (order.notes === "") {
             return (<></>)

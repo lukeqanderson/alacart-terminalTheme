@@ -178,6 +178,7 @@ class MenuItem extends Component {
                         toppingCount++;
                     }
                 }
+                // checks for even number of toppings (duplicate)
                 if (toppingCount % 2 === 0) {
                     toppingsNoDuplicate.splice(i, i + 1);
                 }
